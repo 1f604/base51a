@@ -6,6 +6,8 @@ I was creating a URL shortener and of course, short URLs are meant to be read an
 
 Although this alphabet was designed for URLs, it can be used for other purposes.
 
+For more background details see: https://1f604.blogspot.com/2023/03/introducing-base52a-visually.html
+
 ## Scheme
 
 Dealing with visually ambiguous character groups:
@@ -43,3 +45,4 @@ TODOs:
 - add validation function
 - add generation function
 - Add a "checksum" character at the end, or else specify algorithm to ensure a Hamming distance.
+
