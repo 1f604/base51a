@@ -1,10 +1,12 @@
 # base52A - a visually unambiguous alphabet for URLs
 
-This alphabet was designed for URLs but can be used for other purposes.
-
 ## Background
 
 I was creating a URL shortener and of course, short URLs are meant to be read and typed by humans. This creates a problem when characters are visually similar, such as O and 0.
+
+Although this alphabet was designed for URLs, it can be used for other purposes.
+
+## Scheme
 
 Dealing with visually ambiguous character groups:
 
