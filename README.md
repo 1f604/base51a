@@ -37,7 +37,7 @@ So the following characters are banned from the alphabet:
 *    rn => Error: Invalid ID
 *    nn => Error: Invalid ID
 
-So, 10 characters are banned and 4 pairings are banned. Out of the 26*2 + 10 therefore we only have 26*2 = 52 characters. 
+So, 10 characters are banned and 4 pairings are banned. Out of the `26*2 + 10` characters therefore we only have `26*2 = 52` characters. 
 
 It is important to note the pairings of characters that are banned.
 
