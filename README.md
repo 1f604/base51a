@@ -40,8 +40,7 @@ So, 11 characters are banned and 2 pairings are banned. Out of the 62 characters
 
 It is important to note the pairings of characters that are banned.
 
-TODOs: 
-- add validation function
+TODOs:
 - add generation function
 - Add a "checksum" character at the end, or else specify algorithm to ensure a Hamming distance.
 
