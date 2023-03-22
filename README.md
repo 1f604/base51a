@@ -18,7 +18,7 @@ Dealing with visually ambiguous character groups:
 *    W and VV => ban both W and VV
 *    w and vv => ban both w and vv
 *    m, rn, and nn => ban both m and n
-*    d and cl => ban c and d
+*    d and cl => ban both c and d
 
 So the following characters are banned from the alphabet:
 
