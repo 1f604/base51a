@@ -17,8 +17,8 @@ Dealing with visually ambiguous character groups:
 *    1, I, and l => ban 1, I, and l
 *    W and VV => ban both W and VV
 *    w and vv => ban both w and vv
-*    m, rn, and nn => ban m, rn, and nn
-*    d and cl => ban both c and d
+*    m, rn, and nn => ban both m and n
+*    d and cl => ban c and d
 
 So the following characters are banned from the alphabet:
 
@@ -30,14 +30,13 @@ So the following characters are banned from the alphabet:
 *    W => Error: Invalid ID
 *    w => Error: Invalid ID
 *    m => Error: Invalid ID
+*    n => Error: Invalid ID
 *    c => Error: Invalid ID
 *    d => Error: Invalid ID
 *    VV => Error: Invalid ID
 *    vv => Error: Invalid ID
-*    rn => Error: Invalid ID
-*    nn => Error: Invalid ID
 
-So, 10 characters are banned and 4 pairings are banned. Out of the `26*2 + 10` characters therefore we only have `26*2 = 52` characters. 
+So, 11 characters are banned and 2 pairings are banned. Out of the 62 characters therefore we only have 51 characters. 
 
 It is important to note the pairings of characters that are banned.
 
