@@ -1,4 +1,4 @@
-# base51a - a visually unambiguous alphabet for URLs
+# base53a - a visually unambiguous alphabet for URLs
 
 ## How to use
 
@@ -7,25 +7,25 @@
 #### How to use it
 
 ```
-$ cd base51a/
+$ cd base53a/
 $ ls
 LICENSE  python  README.md
 $ cd python
 $ python
->>> import base51a
->>> base51a.b51a_generate_random(5)
+>>> import base53a
+>>> base53a.b53a_generate_random(5)
 'M3iXj'
->>> base51a.b51a_validate("hac")
+>>> base53a.b53a_validate("hac")
 'Error: illegal character: c'
->>> base51a.b51a_validate("hvva")
+>>> base53a.b53a_validate("hvva")
 'Error: illegal pair: vv'
->>> base51a.b51a_validate("hak")
+>>> base53a.b53a_validate("hak")
 True
 ```
 
 #### How to run the tests
 ```
-$ cd base51a/
+$ cd base53a/
 $ ls
 LICENSE  python  README.md
 $ cd python
@@ -54,8 +54,8 @@ Dealing with visually ambiguous character groups:
 *    1, I, and l => ban 1, I, and l
 *    W and VV => ban both W and VV
 *    w and vv => ban both w and vv
-*    m, rn, and nn => ban both m and n
-*    d and cl => ban both c and d
+*    m, rn, and nn => ban m, rn, and nn
+*    d and cl => ban d (l is already banned)
 
 So the following characters are banned from the alphabet:
 
@@ -72,11 +72,12 @@ So the following characters are banned from the alphabet:
 *    d => Error: Invalid ID
 *    VV => Error: Invalid ID
 *    vv => Error: Invalid ID
+*    rn => Error: Invalid ID
+*    nn => Error: Invalid ID
 
-So, 11 characters are banned and 2 pairings are banned. Out of the 62 characters therefore we only have 51 characters. 
+So, 11 characters are banned and 2 pairings are banned. Out of the 62 characters therefore we only have 53 characters. 
 
 It is important to note the pairings of characters that are banned.
 
 TODOs:
 - Add a "checksum" character at the end, or else specify algorithm to ensure a Hamming distance.
-
