@@ -75,7 +75,7 @@ So the following characters are banned from the alphabet:
 *    rn => Error: Invalid ID
 *    nn => Error: Invalid ID
 
-So, 11 characters are banned and 2 pairings are banned. Out of the 62 characters therefore we only have 53 characters. 
+So, 9 characters are banned and 4 pairings are banned. Out of the 62 characters therefore we only have 53 characters. 
 
 It is important to note the pairings of characters that are banned.
 
