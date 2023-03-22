@@ -70,6 +70,15 @@ class TestBase51aGenerateMethod(unittest.TestCase):
 			for c in legal_characters:
 				self.assertTrue(seen[c], (c, seen))
 			
+	def test_generates_all_legal_strings(self):
+		# check it generates all legal 2-character strings
+		n = 2
+		results = set()
+		for i in range(50000): # should have less than 0.001% chance of failing
+			rs = b51a_generate_random(n)
+			results.add(rs)
+		self.assertEqual(len(results), 51 * 51 - 2) # only 'VV' and 'vv' are disallowed
+			
 	def test_generates_different_strings(self):
 		results = set()
 		for _ in range(100):
