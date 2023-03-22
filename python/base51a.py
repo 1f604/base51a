@@ -48,3 +48,5 @@ def b51a_generate_random(n:int):
 		result.append(prev_char)
 	return ''.join(result)
 		
+		
+		

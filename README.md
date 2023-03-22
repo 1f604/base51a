@@ -1,5 +1,42 @@
 # base51a - a visually unambiguous alphabet for URLs
 
+## How to use
+
+### Python
+
+#### How to use it
+
+```
+$ cd base51a/
+$ ls
+LICENSE  python  README.md
+$ cd python
+$ python
+>>> import base51a
+>>> base51a.b51a_generate_random(5)
+'M3iXj'
+>>> base51a.b51a_validate("hac")
+'Error: illegal character: c'
+>>> base51a.b51a_validate("hvva")
+'Error: illegal pair: vv'
+>>> base51a.b51a_validate("hak")
+True
+```
+
+#### How to run the tests
+```
+$ cd base51a/
+$ ls
+LICENSE  python  README.md
+$ cd python
+$ python -m unittest
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.599s
+
+OK
+```
+
 ## Background
 
 I was creating a URL shortener and of course, short URLs are meant to be read and typed by humans. This creates a problem when characters are visually similar, such as O and 0.
@@ -41,6 +78,5 @@ So, 11 characters are banned and 2 pairings are banned. Out of the 62 characters
 It is important to note the pairings of characters that are banned.
 
 TODOs:
-- add generation function
 - Add a "checksum" character at the end, or else specify algorithm to ensure a Hamming distance.
 
