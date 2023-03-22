@@ -1,4 +1,4 @@
-# base52A - a visually unambiguous alphabet for URLs
+# base51A - a visually unambiguous alphabet for URLs
 
 ## Background
 
