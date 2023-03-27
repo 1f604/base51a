@@ -4,7 +4,7 @@
 
 ### Python
 
-#### How to use it
+#### How to actually use it
 
 ```
 $ cd base53a/
@@ -12,15 +12,11 @@ $ ls
 LICENSE  python  README.md
 $ cd python
 $ python
->>> import base53a
->>> base53a.b53a_generate_random(5)
-'M3iXj'
->>> base53a.b53a_validate("hac")
-'Error: illegal character: c'
->>> base53a.b53a_validate("hvva")
-'Error: illegal pair: vv'
->>> base53a.b53a_validate("hak")
-True
+>>> from base53a import Base53ID, b53_generate_random_Base53ID, b53_generate_next_Base53ID
+>>> b53_generate_random_Base53ID(5)
+Base53ID(string_without_checksum='4gG6g', checksum_char='F')
+>>> b53_generate_next_Base53ID(Base53ID(string_without_checksum='4gG6g', checksum_char='F'))
+Base53ID(string_without_checksum='4gG6h', checksum_char='8')
 ```
 
 #### How to run the tests
@@ -29,12 +25,22 @@ $ cd base53a/
 $ ls
 LICENSE  python  README.md
 $ cd python
-$ python -m unittest
-.......
+$ python -m unittest 
+..........
 ----------------------------------------------------------------------
-Ran 7 tests in 0.599s
+Ran 10 tests in 3.757s
 
 OK
+```
+
+#### How to type check
+
+```
+$ cd base53a
+$ python3 -m venv venv
+$ . venv/bin/activate
+(venv) $ pip install mypy
+(venv) $ mypy .
 ```
 
 ## Background
