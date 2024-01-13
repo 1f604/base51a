@@ -1,4 +1,4 @@
-package base53a_test
+package util_test
 
 import (
 	"fmt"
@@ -179,7 +179,7 @@ func Test_Generate_Random_generates_all_legal_strings(t *testing.T) {
 	b53m := util.NewBase53IDManager()
 
 	// test it generates all legal 2 character strings
-	n := 2
+	n := 3
 	results := make(map[string]bool)
 	if len(results) != 0 {
 		panic("Not expected length")
@@ -191,8 +191,9 @@ func Test_Generate_Random_generates_all_legal_strings(t *testing.T) {
 		}
 		results[rs.GetCombinedString()] = true
 	}
-	if len(results) != 53*53-4*2 { // only 'VV' 'vv' 'rn' and 'nn' are disallowed, but these pairs can occur in two places
-		panic("Unexpected number of generated strings")
+	expected := 53*53 - 4*2
+	if len(results) != expected { // only 'VV' 'vv' 'rn' and 'nn' are disallowed, but these pairs can occur in two places
+		t.Fatalf("Unexpected number of generated strings, expected %d got %d", expected, len(results))
 	}
 }
 
